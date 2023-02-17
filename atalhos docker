@@ -1,0 +1,21 @@
+-----------COMANDOS DOCKER---------------
+docker container list -a   	!Lista todos os containers inclusive os desligados
+docker container list -q   	!Lista todos os IDS dos containers
+docker images    	   	!Lista as imagens que estão baixadas no docker 
+docker pull (nome_imagem) 	!Baixa a Imagem
+docker exec -it (id_container) bash  !Entra dentro do serviço do mysql via terminal (it define um comando no caso o bash)
+
+
+
+
+
+-----------COMANDOS DOCKER-COMPOSE----------
+docker-compose up -d    !Roda um arquivo docker-compose.yaml
+
+
+
+
+--------COMANDOS SQL TERMINAL---------------
+mysql -u (usuario) -p    !loga no mysql com um usuário geralmente "root"
+
+
