@@ -6,13 +6,18 @@ RUN apt-get update \
     && docker-php-ext-install curl
 
 # Instalar o PDO MySQL
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql 
+
+# Instalar o driver do mysqli
+RUN docker-php-ext-install mysqli
 
 # Habilitar a extensão pdo_mysql
 RUN docker-php-ext-enable pdo_mysql
+
+# Habilitar a extensão mysqli
+RUN docker-php-ext-enable mysqli
 
 # Instalar o Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 EXPOSE 80
 RUN service apache2 restart
-
