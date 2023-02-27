@@ -6,19 +6,14 @@ docker pull (nome_imagem) 	!Baixa a Imagem
 docker exec -it (id_container) bash  !Entra dentro do serviço do mysql via terminal (it define um comando no caso o bash)
 docker run nome-da-sua-imagem:tag php -m   !verifica as instalações dos driver PHP no container docker
 
-
-
 -----------COMANDOS DOCKER-COMPOSE----------
 docker-compose up -d    !Roda um arquivo docker-compose.yaml
-
 
 --------COMANDOS SQL TERMINAL---------------
 mysql -u (usuario) -p    !loga no mysql com um usuário geralmente "root"
 show Databases;
 CREATE DATABASE mydatabase CHARACTER SET utf8 COLLATE utf8_general_ci; 
 GRANT ALL PRIVILEGES ON bibliotecav2.* TO meuuser;
-
-
 
 --------COMANDOS COMPOSER---------------
 composer require (vendor/package)   !Cria tod a estrutura composer inclusive o arquivo composer.json
