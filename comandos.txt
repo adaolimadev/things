@@ -25,3 +25,8 @@ composer install 	!Quando ja se tem o composer.json então ele cria somente as e
 --------COMANDOS TERMINAL LINUX---------------
 sudo chmod 777 (nomedapasta) -R    !para dar acesso total a pasta e suas subpastas
 
+--------COMANDOS LARAVEL---------------
+php artisan make:controller (nomedocontrolller)    !Cria um controller
+php artisan migrate   !Cria as tabelas que estão na pasta migration
+php artisan migrate:fresh  !LIMPA as tabelas 
+php artisan migrate:status !verifica o status das migraç
