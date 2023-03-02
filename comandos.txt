@@ -16,6 +16,7 @@ mysql -u (usuario) -p    !loga no mysql com um usuário geralmente "root"
 show Databases;
 CREATE DATABASE mydatabase CHARACTER SET utf8 COLLATE utf8_general_ci; 
 GRANT ALL PRIVILEGES ON bibliotecav2.* TO meuuser;
+SET GLOBAL time_zone = 'America/Sao_Paulo'; 
 
 --------COMANDOS COMPOSER---------------
 composer require (vendor/package)   !Cria tod a estrutura composer inclusive o arquivo composer.json
