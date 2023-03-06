@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  php-apache-environment:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: meu-php
+    volumes:
+      #Quando for rodar outro projeto tirar a extensão /proj_laravel/example-app
+      - ./php/src/proj_laravel/example-app:/var/www/html/
+      - ~/.composer:/var/www/.composer
+      #- ./php/conf:/etc/apache2/sites-available/
+    ports:
+      - 8000:80
+    environment:
+      COMPOSER_HOME: /var/www/.composer
+  db:
+    container_name: db
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: minhasenha123
+      MYSQL_DATABASE: meubd
+      MYSQL_USER: meuuser
+      MYSQL_PASSWORD: minhasenha
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "9906:3306"
